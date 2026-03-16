@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0D6EFD;
+  --color-primary-dark: #005AD1;
+  --color-primary-light: #E3F0FF;
+  --color-dark: #1C1C1C;
+  --color-secondary: #8B96A5;
+  --color-border: #DEE2E7;
+  --color-bg: #F7F7F7;
+  
+  --font-sans: "Inter", "system-ui", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-dark font-sans;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-[1200px] mx-auto px-4;
+  }
+}
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+}
